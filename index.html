@@ -2,37 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Ananya Saha | OSM Nearby Mappers</title>
+    <title>Ananya Saha | OSM Explorer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="sidebar">
-        <h2>Ananya Saha</h2>
+      <aside class="sidebar">
+        <img src="ananya.jpg" alt="Ananya Saha" class="avatar" />
+        <h1>Ananya Saha</h1>
+        <p>🗺️ Mapper | 🎨 Creator | 🌍 Explorer</p>
         <ul>
+          <li onclick="showTab('about')">About</li>
           <li onclick="showTab('projects')">Projects</li>
-          <li onclick="showTab('education')">Education</li>
-          <li onclick="showTab('work')">Work</li>
+          <li onclick="showTab('blog')">Blog</li>
+          <li onclick="showTab('contact')">Contact</li>
         </ul>
-      </div>
+        <div class="socials">
+          <a href="https://github.com/ananya" target="_blank">GitHub</a>
+          <a href="https://twitter.com/ananya" target="_blank">Twitter</a>
+        </div>
+      </aside>
 
-      <div class="content">
-        <div id="projects" class="tab active">
-          <h1>Projects</h1>
-          <p>Coming soon: OSM Nearby Mappers tool</p>
-        </div>
-        <div id="education" class="tab">
-          <h1>Education</h1>
-          <p>Eastern University, B.Sc. in CSE</p>
-        </div>
-        <div id="work" class="tab">
-          <h1>Work</h1>
-          <p>President @ YouthMappers EU | Open Mapping Guru</p>
-        </div>
-      </div>
+      <main class="content">
+        <section id="about" class="tab active">
+          <h2>Welcome to My World</h2>
+          <p>I’m Ananya Saha – passionate about mapping our world through OSM, empowering communities, and telling stories through data.</p>
+          <p>This interactive portfolio shows off my projects, thoughts, and how I work with maps and people.</p>
+        </section>
+
+        <section id="projects" class="tab">
+          <h2>Projects</h2>
+          <ul>
+            <li>🌍 OSM Nearby Mappers <button onclick="showLocation()">Find Nearby</button></li>
+            <li>🛰️ Space Apps Challenge 2024</li>
+            <li>📚 Cultural Mapping of Bangladesh</li>
+          </ul>
+          <div id="locationResult"></div>
+        </section>
+
+        <section id="blog" class="tab">
+          <h2>Blog</h2>
+          <p>🚧 Coming soon: Stories on mapping, climate, and people.</p>
+        </section>
+
+        <section id="contact" class="tab">
+          <h2>Let's Connect</h2>
+          <p>Email: <a href="mailto:ananya@example.com">ananya@example.com</a></p>
+          <p>Telegram: @ananyasaha</p>
+        </section>
+      </main>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
