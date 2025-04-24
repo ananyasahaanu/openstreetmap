@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, #2a2a40, #1c1c2e);
-  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #1b1c2d, #2c2e45);
+  color: white;
+  overflow: hidden;
 }
 
 .container {
@@ -11,42 +12,76 @@ body {
 }
 
 .sidebar {
-  width: 220px;
-  background: #151528;
+  background: #1d1f39;
+  width: 250px;
   padding: 20px;
-  box-shadow: 5px 0 15px #00000050;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.sidebar h2 {
-  margin-top: 0;
-  color: #fff;
+.sidebar .avatar {
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid #00ffe0;
+  margin-bottom: 10px;
+}
+
+.sidebar h1 {
+  font-size: 1.5em;
+  margin: 10px 0 5px;
+}
+
+.sidebar p {
+  font-size: 0.9em;
+  color: #aaa;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin-top: 20px;
 }
 
 .sidebar li {
   padding: 10px;
   cursor: pointer;
-  transition: background 0.2s;
+  background: #2b2c4e;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
 
 .sidebar li:hover {
-  background: #282850;
+  background: #3c3d60;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  color: #00ffe0;
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .content {
   flex: 1;
-  padding: 30px;
+  padding: 40px;
   overflow-y: auto;
+  animation: fadeIn 0.5s ease-in;
 }
 
 .tab {
   display: none;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .tab.active {
   display: block;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
